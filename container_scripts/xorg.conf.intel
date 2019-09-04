@@ -1,0 +1,36 @@
+# This configuration file is tailored to work in a container.
+
+Section "ServerFlags"
+	Option "AutoAddDevices" "False"
+EndSection
+
+Section "ServerLayout"
+	Identifier "Layout"
+	Screen		0 "Main Screen" 0 0
+	Option		"Xinerama" "0"
+EndSection
+
+Section "InputDevice"
+	Identifier "Trackpad"
+	Driver "synaptics"
+	Option "AutoServerLayout" "True"
+	Option "Device" "/dev/input/eventY"
+EndSection
+
+Section "InputDevice"
+	Identifier "Keyboard"
+	Driver "libinput"
+	Option "AutoServerLayout" "True"
+	Option "Device" "/dev/input/eventX"
+EndSection
+
+Section "Device"
+	Identifier "Intel GPU Device"
+	Driver "intel"
+	BusID "pci:X:X:X"
+EndSection
+
+Section "Screen"
+	Identifier "Main Screen"
+	Device "Intel GPU Device"
+EndSection

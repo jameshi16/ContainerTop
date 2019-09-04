@@ -1,0 +1,4 @@
+[Seat:*]
+display-setup-script=xrandr --setprovideroutputsource modesetting NVIDIA-0 && xrandr --auto
+greeter-wrapper=/usr/lib/lightdm/lightdm-greeter-session
+display-stopped-script=/bin/chvt 2

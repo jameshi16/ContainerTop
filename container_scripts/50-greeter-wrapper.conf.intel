@@ -1,0 +1,3 @@
+[Seat:*]
+greeter-wrapper=/usr/lib/lightdm/lightdm-greeter-session
+display-stopped-script=/bin/chvt 2
